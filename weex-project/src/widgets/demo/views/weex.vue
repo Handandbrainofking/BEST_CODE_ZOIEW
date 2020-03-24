@@ -70,9 +70,13 @@ module.exports = {
       letterSpacing: 0
     }
   }),
+  created() {
+      this.$toast('hello')
+  },
   mounted() {
     this.subTitle = 'Midea 模版项目'
   },
+
   methods: {
     jumpTo() {
       let url = 'welcome.js'
@@ -88,6 +92,7 @@ module.exports = {
     },
     alert() {
       this.$alert('world')
+      this.$forceUpdate();
     }
   }
 }
